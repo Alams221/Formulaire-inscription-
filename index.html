@@ -47,10 +47,7 @@
     </section>
     </div>
         <script>
-            function _(e) {
-                return document.getElementById(e);
-            }
-
+            
             const displayform =_('displayForm');
             const forlogin =_('forLogin');
             const loginForm =_('loginForm');
@@ -66,16 +63,22 @@
                     formContainer.style.transform = 'translate(-100%)';
                     formContainer.style.transition = 'transform .5s';
                     registerForm.classList.remove('toggleForm');
-                    loginForm.classList.add('toggleform');
+                    loginForm.classList.add('toggleForm');
                 }
 
             });
+
+
+            function _(e) {
+                return document.getElementById(e);
+            }
+            function showForm() {
+                document.querySelector('.form-wrapper .card').classList.toggle('show');
+            }
             
 
            
-            function ShowForm() {
-                document.querySelector('.form-wrapper .card').classList.toggle('show');
-            }
+            
            
             
         
